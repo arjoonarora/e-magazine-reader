@@ -104,5 +104,16 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "s") modeToggle.click();
 });
 
+// ========== MOBILE PE ZOOM BUTTON DISABLE ==========
+const zoomToggle = document.getElementById('zoomToggle');
+ isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+if (isMobile) {
+    zoomToggle.disabled = true;
+    zoomToggle.style.opacity = '0.5';
+    zoomToggle.style.cursor = 'not-allowed';
+    zoomToggle.title = 'Zoom mode is not available on mobile';
+}
+
 
 render();
