@@ -335,3 +335,12 @@ body.zoom #bookContainer {
     .book-btn { width: 34px; height: 34px; font-size: 15px; }
     #modeToggle, #zoomToggle { padding: 7px 11px; font-size: 11px; }
 }
+/* Mobile pe zoom button disable + hide */
+@media (max-width: 768px) {
+    #zoomToggle {
+        display: none;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
